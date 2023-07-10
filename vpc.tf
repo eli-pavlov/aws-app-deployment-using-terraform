@@ -16,6 +16,10 @@ module "vpc" {
 
 
      tags = {
-    Project  = "Secret"
-    Endpoint = "true"
+    Terraform  = "true"
+    Environment = "Prod"
+}
+
+     vpc_tags = {
+    Name  = var.VPC_NAME
 }
