@@ -58,7 +58,7 @@ variable rmqpass {
   default = "Gr33n@pple123456"
 }
 
-variable user {
+variable dbuser {
   default = "admin"
 }
 
