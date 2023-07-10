@@ -24,7 +24,7 @@ resource "aws_db_instance" "vprofile-rds" {
   password             = var.dbpass
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
-  db_subnet_group_name = [aws_db_subnet_group.vprofile-rds-subgrp.name]
+  db_subnet_group_name = aws_db_subnet_group.vprofile-rds-subgrp.name
   vpc_security_group_ids = [aws_security_group.vprofile-backend-sg.id]
   multi_az             = "false"
   publicly_accessible   = "false"
