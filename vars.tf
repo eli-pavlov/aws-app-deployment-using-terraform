@@ -24,23 +24,50 @@ variable ZONE3 {
 variable AMIS {
   type = map
   default = {
-    eu-central-1 = "ami-07ce6ac5ac8a0ee6f"
+    eu-central-1 = "ami-04e601abe3e1a910f"
     eu-west-1 = "ami-0fb2f0b847d44d4f0"
   }
 }
 
-variable USER {
-  default = "ec2-user"
+variable USERNAME {
+  default = "ubuntu"
 }
 
-variable PUB_KEY {
-  default = "dovekey.pub"
+variable PRIV_KEY_PATH {
+  default = "vprofilekey"
 }
+
+variable PUB_KEY_PATH {
+  default = "vprofilekey.pub"
+}
+
 
 variable PRIV_KEY {
   default = "dovekey"
 }
 
 variable MYIP {
-  default = "183.83.67.89/32"
+  default = "0.0.0.0/0"
 }
+
+variable rmquser {
+  default = "rabbit"
+}
+
+variable rmqpass {
+  default = "Gr33n@pple123456"
+}
+
+variable user {
+  default = "admin"
+}
+
+variable dbpass {
+  default = "admin123"
+}
+
+variable dbname {
+  default = "accounts"
+}
+
+
