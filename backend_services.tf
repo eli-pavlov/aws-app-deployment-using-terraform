@@ -2,7 +2,7 @@ resource "aws_db_subnet_group" "vprofile-rds-subgrp" {
     name = "main"
     subnet_ids = [module.vpc.private_subnets[0], module.vpc.private_subnets[1], module.vpc.private_subnets[2]]
     tags = {
-        Name "Subnet group for RDS"
+        Name = "Subnet group for RDS"
         }
     }
 
