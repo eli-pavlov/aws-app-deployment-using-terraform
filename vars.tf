@@ -74,10 +74,6 @@ variable instance_count {
   default = "1"
 }
 
-variable dbname {
-  default = "accounts"
-}
-
 variable VPC_NAME {
   default = "vprofile-VPC"
 }
