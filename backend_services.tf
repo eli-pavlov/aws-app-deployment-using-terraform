@@ -39,6 +39,4 @@ resource "aws_elasticache_cluster" "vprofile-cache" {
   port                 = 11211
   security_group_ids = [aws_security_group.vprofile-backend-sg.id]
   subnet_group_name = aws_elasticache_subnet_group.vprofile-ecache-subgrp.name
-
-
 }
