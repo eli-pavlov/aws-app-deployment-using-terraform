@@ -40,3 +40,24 @@ resource "aws_elasticache_cluster" "vprofile-cache" {
   security_group_ids = [aws_security_group.vprofile-backend-sg.id]
   subnet_group_name = aws_elasticache_subnet_group.vprofile-ecache-subgrp.name
 }
+
+resource "aws_mq_broker" "vprofile-rmq" {
+  broker_name = "vprofile-rmw"
+
+  configuration {
+    id       = aws_mq_configuration.test.id
+    revision = aws_mq_configuration.test.latest_revision
+  }
+
+  engine_type        = "ActiveMQ"
+  engine_version     = "5.15.9"
+  host_instance_type = "mq.t2.micro"
+  security_groups    = [aws_security_group.vprofile-backend-sg.id]
+  subnet_ids = [module.vpc.private_subnets[0]]
+
+
+  user {
+    username = var.rmquser
+    password = var.rmqpass
+  }
+}
