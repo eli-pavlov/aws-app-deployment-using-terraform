@@ -1,8 +1,8 @@
 terraform {
   required_version = ">= 0.12"
   backend "s3" {
-    bucket = var.BUCKET
+    bucket = "terra-vprofile-state"
     key = "terraform/backend"
-    region = var.REGION
+    region = "eu-central-1"
   }
 }
