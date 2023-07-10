@@ -29,3 +29,16 @@ resource "aws_db_instance" "vprofile-rds" {
   multi_az             = "false"
   publicly_accessible   = "false"
 }
+
+resource "aws_elasticache_cluster" "vprofile-cache" {
+  cluster_id           = "vprofile-cache"
+  engine               = "memcached"
+  node_type            = "cache.t2.micro"
+  num_cache_nodes      = 1
+  parameter_group_name = "default.memcached1.4"
+  port                 = 11211
+  security_group_ids = [aws_security_group.vprofile-backend-sg.id]
+  subnet_group_name = aws_db_subnet_group.vprofile-ecache-subgrp.name
+
+
+}
