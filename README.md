@@ -1,5 +1,5 @@
 ## Deploying Full Stack Web App on AWS using Terraform
-This repository demonstrates the process of deploying a full stack web application on AWS using Terraform. By leveraging the power of Terraform's infrastructure as code (IaC) capabilities, you can easily provision and manage the required cloud resources for your application.
+This repository demonstrates the process of deploying a full stack web application on AWS using Terraform.
 
 ## Overview
 Deploying a full stack web application on the cloud involves setting up a variety of resources, including virtual machines, databases, load balancers, and networking components. This repository provides a structured approach to automating the deployment process using Terraform, ensuring scalability, repeatability, and maintainability.
