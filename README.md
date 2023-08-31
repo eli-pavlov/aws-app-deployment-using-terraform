@@ -8,7 +8,7 @@ Deploying a full stack web application on the cloud involves setting up a variet
 ## Terraform:
 Terraform enables you to define and manage cloud infrastructure using declarative code. This ensures that your infrastructure is consistent across different environments and can be versioned alongside your application code.
 
-##Amazon Web Services (AWS):
+## Amazon Web Services (AWS):
 AWS provides a comprehensive suite of cloud services that can be leveraged to host and deploy your full stack web application. This repository focuses on provisioning resources on AWS.
 
 ## License
